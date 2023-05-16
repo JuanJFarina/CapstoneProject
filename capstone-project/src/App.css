@@ -27,13 +27,15 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-evenly;
 }
 
-.header-fluid ul {
-  margin-top: 4%;
+.header-fluid nav {
+  margin-top: 1%;
 }
 
-.header li, .footer li {
+.header a, .header Link, .footer li {
   margin-right: 1rem;
   list-style: none;
+  text-decoration: none;
+  color: #000;
   font-weight: 900;
 }
 

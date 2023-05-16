@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export class Nav extends Component {
-  render() {
-    return (
-      <nav>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Menu</li>
-            <li>Reservations</li>
-            <li>Order Online</li>
-            <li>Login</li>
-        </ul>
-      </nav>
-    )
-  }
+const Nav = () => {
+  return (
+    <nav>
+      <Link to="/" className="nav-item">Home</Link>
+      <a href="#" className="nav-item">About</a>
+      <a href="#" className="nav-item">Menu</a>
+      <Link to="/booking" className="nav-item">Reservations</Link>
+      <a href="#" className="nav-item">Order online</a>
+      <a href="#" className="nav-item">Login</a>
+    </nav>
+  )
 }
+
+export default Nav;
