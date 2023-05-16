@@ -1,0 +1,94 @@
+.app {
+  font-family: 'Karla';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Markazi Text";
+}
+
+.button {
+  background-color: #F4CE14;
+  border-radius: 12px;
+  color: #000;
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  width: 175px;
+}
+
+.header, .footer {
+  background-color: #EDEFEE;
+  padding: 2% 0 2% 0;
+}
+
+.header-fluid, .header-fluid ul, .footer-elements {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header-fluid ul {
+  margin-top: 4%;
+}
+
+.header li, .footer li {
+  margin-right: 1rem;
+  list-style: none;
+  font-weight: 900;
+}
+
+.green {
+  background-color: #495e57;
+  padding: 2% 0 2% 0;
+  height: 275px;
+}
+
+.green {
+  color: #fff;
+}
+
+.green h1 {
+  color: #f4ce14;
+  font-size: 3.2rem;
+  margin: -4% 0 -4% 0;
+}
+
+.green p {
+  line-height: 1.2rem;
+  margin-bottom: 2%;
+}
+
+.main-food {
+  overflow: visible;
+}
+
+.specials {
+  margin-top: 5%;
+}
+
+.specials h1 {
+  font-size: 2.7rem;
+  font-weight: 900;
+}
+
+.specials .button {
+  float: right;
+}
+
+.food {
+  width: 85%;
+  height: 75%;
+  margin-left: 15%;
+  border-radius: 16px;
+  object-fit:cover;
+}
+
+.foodCard {
+  background-color: #EDEFEE;
+  border-radius: 16px 16px 0 0;
+}
+
+.specialFood img {
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+}
