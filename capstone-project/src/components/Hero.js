@@ -5,8 +5,8 @@ import food from "../assets/restauranfood.jpg"
 export default function Hero() {
     return (
         <div className="row green">
-            <div className="col-sm-3 d-none d-sm-block"></div>
-            <div className="col-6 col-sm-3">
+            <div className="col-1 col-sm-3"></div>
+            <div className="col-5 col-sm-3">
             <div>
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>
@@ -14,10 +14,10 @@ export default function Hero() {
                 <Button text="Reserve a table" />
             </div>
             </div>
-            <div className="col-6 col-sm-3 main-food">
+            <div className="col-5 col-sm-3 main-food">
                 <img src={food} alt="food" className="food"></img>
             </div>
-            <div className="col-sm-3 d-none d-sm-block"></div>
+            <div className="col-1 col-sm-3"></div>
         </div>
     )
 }

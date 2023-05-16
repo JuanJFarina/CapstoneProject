@@ -12,27 +12,27 @@ export default function Specials() {
     return (
         <>
             <div className="row specials">
-                <div className="col-sm-3 d-none d-sm-block"></div>
-                <div className="col-6 col-sm-3">
+                <div className="col-1 col-sm-3"></div>
+                <div className="col-5 col-sm-3">
                     <h1>This Weeks Special !</h1>
                 </div>
-                <div className="col-6 col-sm-3">
+                <div className="col-5 col-sm-3">
                     <Button text="Online Menu" />
                 </div>
-                <div className="col-sm-3 d-none d-sm-block"></div>
+                <div className="col-1 col-sm-3"></div>
             </div>
             <div className="row specialFood">
-                <div className="col-sm-3 d-none d-sm-block"></div>
-                <div className="col-12 col-sm-2">
+                <div className="col-1 col-sm-3"></div>
+                <div className="col-10 col-sm-2">
                     <FoodCard image={greekSalad} imgText="Greek Salad" price="$12.99" desc={greekSaladDesc} />
                 </div>
-                <div className="col-12 col-sm-2 d-none d-sm-block">
+                <div className="col-10 col-sm-2 d-none d-sm-block">
                     <FoodCard image={bruchetta} imgText="Bruchetta" price="$5.99" desc={bruchettaDesc} />
                 </div>
-                <div className="col-12 col-sm-2 d-none d-sm-block">
+                <div className="col-10 col-sm-2 d-none d-sm-block">
                     <FoodCard image={lemonDessert} imgText="Lemon Dessert" price="$5.00" desc={lemonDessertDesc} />
                 </div>
-                <div className="col-sm-3 d-none d-sm-block"></div>
+                <div className="col-1 col-sm-3"></div>
             </div>
         </>
     )

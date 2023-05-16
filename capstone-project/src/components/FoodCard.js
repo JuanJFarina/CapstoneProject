@@ -20,7 +20,7 @@ const FoodCard = (props) => {
                 </div>
                 <div className="row">
                     <div className="col-12">
-                        <p style={{fontSize:'0.6rem', fontWeight: '900'}}>Order a delivery <i class="fas fa-shipping-fast"></i></p>
+                        <p style={{fontSize:'0.6rem', fontWeight: '900'}}>Order a delivery <i className="fas fa-shipping-fast"></i></p>
                     </div>
                 </div>
             </div>
