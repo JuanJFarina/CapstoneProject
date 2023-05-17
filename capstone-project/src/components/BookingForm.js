@@ -8,7 +8,7 @@ export default function BookingForm({availableTimes, dispatch, submitForm}) {
         date: "",
         time: "00:00",
         noOfGuests: 1,
-        occasion: "Birthday"
+        occasion: "Occasion"
     })
 
     const [formValid, setFormValid] = useState(false);
@@ -50,54 +50,44 @@ export default function BookingForm({availableTimes, dispatch, submitForm}) {
     const options = availableTimes.map(time => <option key={time}>{time}</option>);
     
     return (
-        <main className="container-fluid">
-            <div className="row">
-                <div className="col-1 col-sm-4"></div>
-                <div className="col-10 col-sm-4">
-                    <p>Please fill in the form below accurately to enable us serve you nicely.</p>
-                    <form id="booking-form" onSubmit={handleSubmit}>
-                        <div>
-                            <label htmlFor="first-name">First Name</label>
-                            <input type="text" id="first-name" name="firstName" value={formData.firstName} onChange={handleFormChange} minLength={2} required />
-                        </div>
-                        <div>
-                            <label htmlFor="last-name">Last Name</label>
-                            <input type="text" id="last-name" name="lastName" value={formData.lastName} onChange={handleFormChange} minLength={2} required />
-                        </div>
-                        <div>
-                            <label htmlFor="contact-number">Contact Number</label>
-                            <input type="text" id="contact-number" name="contactNumber" placeholder="54-341-3200048" value={formData.contactNumber} onChange={handleFormChange} pattern="[0-9]{2}-[0-9]{3}-[0-9]{7}" />
-                        </div>
-                        <div>
-                            <div>
-                                <label htmlFor="res-date">Choose date</label>
-                                <input type="date" id="res-date" name="date" value={formData.date} onChange={handleDateChange} required min={currentDate}/>
-                            </div>
-                            <div>
-                                <label htmlFor="res-time">Choose time</label>
-                                <select id="res-time " name="time" value={formData.time} onChange={handleFormChange} required>
-                                    {options}
-                                </select>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <label htmlFor="guests">Number of guests</label>
-                                <input type="number" placeholder="1" min="1" max="10" required id="guests" name="noOfGuests" value={formData.noOfGuests} onChange={handleFormChange}/>
-                            </div>
-                            <div>
-                                <label htmlFor="occasion">Occasion</label>
-                                <select id="occasion" name="occasion" required value={formData.occasion} onChange={handleFormChange}>
-                                    <option>Birthday</option>
-                                    <option>Anniversary</option>
-                                </select>
-                            </div>
-                        </div>
-                        <input type="submit" value="Reserve" aria-label="submit button" disabled={!formValid}/>
-                    </form>
+        <main className="container-fluid booking">
+            <p style={{textAlign:'center'}}>Please fill in the form below accurately to enable us serve you nicely.</p>
+            <form id="booking-form" onSubmit={handleSubmit}>
+                <div className="row">
+                    <div className="col-1 col-sm-4"></div>
+                    <div className="col-5 col-sm-3">
+                        <label htmlFor="first-name">First Name</label>
+                        <label htmlFor="last-name">Last Name</label>
+                        <label htmlFor="contact-number">Contact Number</label>
+                        <label htmlFor="res-date">Choose date</label>
+                        <label htmlFor="res-time">Choose time</label>
+                        <label htmlFor="guests">Number of guests</label>
+                        <label htmlFor="occasion">Occasion</label>
+                    </div>
+                    <div className="col-5 col-sm-3 inputs">
+                        <input type="text" id="first-name" name="firstName" value={formData.firstName} onChange={handleFormChange} minLength={2} required />
+                        <input type="text" id="last-name" name="lastName" value={formData.lastName} onChange={handleFormChange} minLength={2} required />
+                        <input type="text" id="contact-number" name="contactNumber" placeholder="54-341-3200048" value={formData.contactNumber} onChange={handleFormChange} pattern="[0-9]{2}-[0-9]{3}-[0-9]{7}" />
+                        <input type="date" id="res-date" name="date" value={formData.date} onChange={handleDateChange} required min={currentDate}/>
+                        <select id="res-time " name="time" value={formData.time} onChange={handleFormChange} required>
+                            {options}
+                        </select>
+                        <input type="number" placeholder="1" min="1" max="10" required id="guests" name="noOfGuests" value={formData.noOfGuests} onChange={handleFormChange}/>
+                        <select id="occasion" name="occasion" required value={formData.occasion} onChange={handleFormChange}>
+                            <option value="Occasion">Occasion</option>
+                            <option value="Birthday">Birthday</option>
+                            <option value="Engagement">Engagement</option>
+                            <option value="Anniversary">Anniversary</option>
+                        </select>
+                    </div>
+                    <div className="col-1 col-sm-4"></div>
                 </div>
-                <div className="col-1 col-sm-4"></div>
-            </div>
+                <div className="row">
+                    <div className="col-12 submitArea" style={{textAlign:'center'}}>
+                        <input type="submit" value="Reserve" aria-label="submit button" disabled={!formValid} className="submit button clickable" />
+                    </div>
+                </div>
+            </form>
         </main>
     )
 }

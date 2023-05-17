@@ -15,10 +15,23 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-weight: 600;
   width: 175px;
+  transition: all 0.2s linear;
+}
+
+.clickable:hover {
+  transition: all 0.2s linear;
+  transform: scale(1.05);
+}
+
+.clickable:active {
+  background-color: #495e57;
+  color: #edefee;
+  border: 1px #edefee solid;
+  transition: all 0.2s linear;
 }
 
 .header, .footer {
-  background-color: #EDEFEE;
+  background-color: #edefee;
   padding: 2% 0 2% 0;
 }
 
@@ -37,6 +50,22 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   color: #000;
   font-weight: 900;
+}
+
+.nav-item {
+  border-radius: 16px;
+  padding: 0.3rem;
+}
+
+.basket {
+  width: 2rem;
+}
+
+.clickable:active {
+  background-color: #495e57;
+  color: #edefee;
+  border: 1px #edefee solid;
+  transition: all 0.2s linear;
 }
 
 .green {
@@ -88,11 +117,95 @@ h1, h2, h3, h4, h5, h6 {
 .foodCard {
   background-color: #EDEFEE;
   border-radius: 16px 16px 0 0;
-  margin-bottom: 5%;
+  margin-bottom: 15%;
 }
 
 .foodImages {
   width: 100% !important;
   border-radius: 16px 16px 0 0;
   margin-bottom: 5%;
+}
+
+.booking {
+  background-color: #edefee;
+}
+
+.booking label {
+  display: block;
+  height: 40px;
+  margin: 0 0 2px 0;
+  font-weight: 700;
+}
+
+.booking .inputs input {
+  display: block;
+  height: 35px;
+  margin: 0 0 5px 0;
+  border-radius: 4px;
+}
+
+.booking select {
+  display: block;
+  background-color: #edefee;
+  border-radius: 4px;
+  color: #495e57;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border: #edefee;
+  height: 35px;
+  margin: 0 0 5px 0;
+  padding: 5px;
+  box-shadow: 0 2px 2px #888;
+}
+
+.booking select option {
+  border: 1px #888 dotted !important;
+}
+
+.submitArea {
+  display: flex;
+  text-align: center !important;
+  justify-content: center !important;
+  justify-items: center !important;
+}
+
+.submit {
+  border: 0 !important;
+  vertical-align: middle !important;
+}
+
+.submit:disabled {
+  background-color: #edefee;
+  color: #888;
+  border: 1px #888 solid !important;
+  border-radius: 12px;
+}
+
+.customers-say {
+  background-color: #fbdabb;
+  margin: -1%;
+  padding: 2% 0 2% 0;
+}
+
+.testimonial {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  height: 300px;
+}
+
+.star {
+  width: 0.8rem;
+  margin: 0.2rem;
+}
+
+.stars {
+  margin-bottom: 1rem;
+}
+
+.user {
+  width: 3rem;
+  border-radius: 50%;
+  display: inline;
 }

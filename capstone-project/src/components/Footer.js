@@ -8,9 +8,6 @@ export class Footer extends Component {
           <div className="col-1 col-sm-3"></div>
           <div className="col-10 col-sm-6 footer-elements">
             <div>
-              <img alt="logo"></img>
-            </div>
-            <div>
                 <p>Doormat Navigation</p>
                 <ul>
                 <li>Home</li>
